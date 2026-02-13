@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Formatter | Churchill Howard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.min.mjs" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mammoth@1.8.0/mammoth.browser.min.js"></script>
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel">
+        <h1>Churchill Howard CV Formatter</h1>
+        <p>
+          Drop a candidate CV file and the app will detect common sections, then rebuild it into a
+          consistent Churchill Howard style.
+        </p>
+
+        <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload CV">
+          <p><strong>Drag &amp; drop CV here</strong></p>
+          <p>Supports .docx, .pdf and .txt</p>
+          <input type="file" id="fileInput" accept=".docx,.pdf,.txt" hidden />
+          <button id="browseBtn" type="button">Choose File</button>
+        </div>
+
+        <div id="status" class="status">No file uploaded yet.</div>
+
+        <div class="controls">
+          <button id="downloadBtn" type="button" disabled>Download Formatted CV</button>
+          <button id="clearBtn" type="button" disabled>Clear</button>
+        </div>
+      </section>
+
+      <section class="preview" id="preview">
+        <article class="cv-template" id="cvTemplate">
+          <header>
+            <h2 id="candidateName">Candidate Name</h2>
+            <p id="candidateContact">contact@email.com | 07xxx xxxxxx | Location</p>
+          </header>
+
+          <section>
+            <h3>Profile</h3>
+            <p id="profileText">Candidate summary will appear here.</p>
+          </section>
+
+          <section>
+            <h3>Core Skills</h3>
+            <ul id="skillsList"></ul>
+          </section>
+
+          <section>
+            <h3>Professional Experience</h3>
+            <div id="experienceList"></div>
+          </section>
+
+          <section>
+            <h3>Education &amp; Qualifications</h3>
+            <ul id="educationList"></ul>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
