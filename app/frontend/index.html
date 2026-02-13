@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV House-Style Formatter</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>CV House-Style Formatter</h1>
+    <p class="sub">Template-driven DOCX formatting (house style as source of truth).</p>
+
+    <section class="card">
+      <h2>Step A: Upload House Style CV (.docx)</h2>
+      <input id="templateFile" type="file" accept=".docx" />
+      <button id="uploadTemplateBtn">Upload House Style CV</button>
+      <p id="templateStatus" class="status"></p>
+    </section>
+
+    <section class="card">
+      <h2>Step B: Upload New CV (.docx or .pdf)</h2>
+      <input id="cvFile" type="file" accept=".docx,.pdf" />
+      <div class="row">
+        <button id="formatBtn">Format CV</button>
+        <button id="previewBtn" class="secondary">Parse Preview (Debug)</button>
+      </div>
+      <p id="formatStatus" class="status"></p>
+      <a id="downloadLink" class="hidden" download="formatted_cv.docx">Download Result</a>
+    </section>
+
+    <section class="card">
+      <h2>Parse Preview</h2>
+      <pre id="previewBox">{}</pre>
+    </section>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

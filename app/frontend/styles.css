@@ -1,0 +1,61 @@
+:root {
+  color-scheme: light;
+  font-family: Arial, sans-serif;
+}
+body {
+  margin: 0;
+  background: #f4f6f8;
+}
+.container {
+  max-width: 840px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.08);
+}
+input[type="file"], button, a {
+  margin-top: 8px;
+}
+button, a {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #0f62fe;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+button.secondary {
+  background: #4d5358;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+.status {
+  margin-top: 10px;
+}
+.status.ok {
+  color: #0a7f2e;
+  font-weight: 600;
+}
+.status.err {
+  color: #b42318;
+}
+.hidden {
+  display: none;
+}
+pre {
+  white-space: pre-wrap;
+  background: #101828;
+  color: #98f5a7;
+  padding: 12px;
+  border-radius: 8px;
+  min-height: 120px;
+}
